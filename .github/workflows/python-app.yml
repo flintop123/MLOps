@@ -37,6 +37,16 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    # Step 4: Run EDA script
+    - name: Run EDA
+      run: |
+        python src/eda.py 
+    # Step 5: Upload artifact (EDA report)
+    - name: Upload EDA report
+      uses: actions/upload-artifact@v3
+      with:
+        name: fashion-mnist-eda-report
+        path: reports/fashion_mnist_eda_report.html       
 
   deploy:
     runs-on: ubuntu-latest
