@@ -11,6 +11,6 @@ df_train['label'] = y_train
 profile = ProfileReport(df_train, minimal=True)
 #profile.to_file("fashion_mnist_eda_report.html")
 #profile = ProfileReport(df_train, explorative=True, correlations={"auto": False})
-report_path = "../reports/fashion_mnist_eda_report.html"
+report_path = "reports/fashion_mnist_eda_report.html"
 profile.to_file(report_path)
 print(f"EDA report saved to {report_path}")
