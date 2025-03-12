@@ -29,21 +29,21 @@ print(f"EDA report saved to {report_path}")
 # ========================
 # 1. Class Distribution
 plt.figure(figsize=(8, 6))
-sns.countplot(x='label', data=df)
+sns.countplot(x='label', data=df_train)
 plt.title('Class Distribution')
 plt.savefig("reports/class_distribution.png")
 plt.close()
 
 # 2. Missing Values Heatmap
 plt.figure(figsize=(10, 8))
-sns.heatmap(df.isnull(), cmap='viridis', cbar=False)
+sns.heatmap(df_train.isnull(), cmap='viridis', cbar=False)
 plt.title('Missing Values Heatmap')
 plt.savefig("reports/missing_values.png")
 plt.close()
 
 # 3. Feature Correlation (if numerical features are available)
 plt.figure(figsize=(12, 10))
-sns.heatmap(df.corr(), cmap='coolwarm', annot=True, fmt=".2f", linewidths=0.5)
+sns.heatmap(df_train.corr(), cmap='coolwarm', annot=True, fmt=".2f", linewidths=0.5)
 plt.title('Feature Correlation')
 plt.savefig("reports/feature_correlation.png")
 plt.close()
