@@ -5,5 +5,4 @@ tensorflow==2.17.0
 scikit-learn==1.3.0
 matplotlib==3.7.2
 keras==3.5.0
-ydata-profiling
-seaborn
+ydata-profiling==4.6.3
