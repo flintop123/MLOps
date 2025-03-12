@@ -14,8 +14,8 @@ df_train['label'] = y_train
 os.makedirs("reports", exist_ok=True)
 
 # Generate report
-profile = ProfileReport(df_train, title="Fashion MNIST EDA Report")
-#profile = ProfileReport(df_train, minimal=True)
+#profile = ProfileReport(df_train, title="Fashion MNIST EDA Report")
+profile = ProfileReport(df_train, minimal=True)
 #profile.to_file("fashion_mnist_eda_report.html")
 #profile = ProfileReport(df_train, explorative=True, correlations={"auto": False})
 report_path = "reports/fashion_mnist_eda_report.html"
